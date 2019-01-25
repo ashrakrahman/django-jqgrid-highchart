@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{#{% include 'sidebar.html' %}#}
+<title>
+    {% block titel %}
+    {% endblock %}
+</title>
+    <head>
+        {% include 'snippets/css.html' %}
+        {% include 'snippets/js.html' %}
+        {% include 'snippets/jq.html' %}
+
+        {% block scripts %}
+        {% endblock %}
+    </head>
+
+    <body>
+    <div class="container">
+        <br>
+        <h3>
+            Tables and Charts
+        </h3>
+        <br>
+        <div>
+
+            {% include 'snippets/nav.html' %}
+        </div>
+
+        <br>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    </body>
+
+</html>
